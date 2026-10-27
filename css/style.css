@@ -1,0 +1,94 @@
+/* ==========================================
+   1. KIỂU DÁNG CƠ BẢN & MÀN HÌNH NHỎ (MOBILE)
+   ========================================== */
+
+body {
+  background-color: #dedede;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Cấu trúc thẻ chứa danh sách ảnh */
+.grid {
+  text-align: center;
+}
+
+/* Cấu hình các thẻ figure chứa hình ảnh (Giao diện Mobile) */
+figure {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;             /* Chiếm full chiều rộng trên mobile */
+  margin: 10px 0;
+  padding: 8px;
+  box-sizing: border-box;  /* Giữ padding/border không làm rớt dòng */
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+figcaption {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  margin: 30px 0 10px 0;
+}
+
+
+/* ==========================================
+   2. TRUY VẤN PHƯƠNG TIỆN (MEDIA QUERIES)
+   ========================================== */
+
+/* Truy vấn #1: Kích hoạt ở 772px (Chế độ xem máy tính bảng) */
+@media screen and (min-width: 772px) {
+  figure {
+    width: 45vw;           /* Chiều rộng bằng 45% chiều rộng chế độ xem */
+    margin: 1%;
+  }
+
+  figure img {
+    max-height: 30vh;      /* Chiều cao tối đa bằng 30% chiều cao chế độ xem */
+    width: auto;           /* Đảm bảo hình ảnh co giáp tỉ lệ không bị bóp méo */
+    object-fit: cover;
+  }
+}
+
+/* Truy vấn #2: Kích hoạt ở 998px (Chế độ xem màn hình lớn) */
+@media screen and (min-width: 998px) {
+  figure {
+    width: 30vw;           /* Chiều rộng bằng 30% chiều rộng chế độ xem */
+  }
+}
